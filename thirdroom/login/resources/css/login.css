@@ -74,9 +74,15 @@ body .login-pf-page {
     line-height: var(--lh-b2);
     letter-spacing: var(--ls-b2);
 }
-.pf-c-button.pf-m-primary.btn-lg {
+.pf-c-button.pf-m-primary {
     background-color: var(--bg-primary);
     color: var(--tc-on-primary);
+}
+.pf-c-button.btn-default {
+    background-color: transparent;
+    box-shadow: var(--bs-primary-border);
+    background-image: unset;
+    color: var(--tc-primary);
 }
 
 #kc-page-title {
@@ -497,6 +503,8 @@ ul#kc-totp-supported-apps {
 
 #kc-form-buttons {
     margin-top: 20px;
+    display: flex;
+    gap: var(--sp-sm);
 }
 
 .login-pf-page .login-pf-brand {
