@@ -1,9 +1,88 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
+@import "./variables.css";
 
 body {
-    /* background-color: #f0f1f2 !important; */
-    font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans",
-        "Droid Sans", "Helvetica Neue", sans-serif !important;
+    padding: var(--sp-md);
+    font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif !important;
+    color: var(--tc-surface);
+}
+body label,
+.pf-c-form__label,
+.pf-c-form__label-text {
+    color: var(--tc-surface-low);
+    font-size: var(--fs-b3);
+    line-height: var(--lh-b3);
+    letter-spacing: var(--ls-b3);
+    font-weight: var(--fw-bold);
+}
+
+*:focus {
+    outline: var(--focus-outline);
+    outline-offset: var(--focus-outline-offset);
+}
+a {
+    color: var(--tc-link);
+}
+a:hover,
+a:focus,
+a:active {
+    color: var(--tc-link) !important;
+}
+
+body .login-pf-page {
+    margin: 0 auto;
+    padding: var(--sp-lg);
+    max-width: 450px;
+    box-shadow: none;
+    border: none;
+    border-radius: var(--br-md);
+    background-color: var(--bg-surface);
+}
+
+.login-pf-header {
+    margin-bottom: var(--sp-md) !important;
+}
+.login-pf-header #kc-page-title {
+    margin: 0;
+    font-size: var(--fs-s1);
+    line-height: var(--lh-s1);
+    letter-spacing: var(--ls-s1);
+    font-weight: var(--fw-semi-bold) !important;
+    text-align: left;
+}
+
+.form-group {
+    margin-bottom: var(--sp-md);
+}
+.form-group .pf-c-form-control {
+    height: 40px;
+    padding: 0 var(--sp-xs);
+    margin-top: var(--sp-xs);
+    border-radius: var(--br-sm);
+    background-color: var(--bg-surface-low);
+    border: none;
+    
+    font-size: var(--fs-b2);
+    letter-spacing: var(--ls-b2);
+    line-height: var(--lh-b2);
+}
+.pf-c-button.btn-lg {
+    padding: 0 var(--sp-md);
+    height: 48px;
+    font-weight: var(--fw-semi-bold);
+    font-size: var(--fs-b2);
+    line-height: var(--lh-b2);
+    letter-spacing: var(--ls-b2);
+}
+.pf-c-button.pf-m-primary {
+    background-color: var(--bg-primary);
+    color: var(--tc-on-primary);
+}
+.pf-c-button.btn-default {
+    background-color: transparent;
+    box-shadow: var(--bs-primary-border);
+    background-image: unset;
+    color: var(--tc-primary);
 }
 
 #kc-page-title {
@@ -17,7 +96,8 @@ body {
 }
 
 .login-pf body {
-    background: #fff;
+    background: none;
+    background-color: var(--bg-surface-low);
     background-size: cover;
     height: 100%;
 }
@@ -86,15 +166,29 @@ a#kc-current-locale-link::after {
 #kc-logo {
     width: 100%;
 }
-
 div.kc-logo-text {
-    background-image: url(https://github.com/matrix-org/thirdroom/raw/main/docs/assets/logo.png);
+    display: flex;
+    align-items: center;
+    gap: var(--sp-sm);
+}
+div.kc-logo-text::before {
+    content: '';
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background-color: transparent;
+    background-image: url(https://github.com/matrix-org/thirdroom/raw/main/res/ic/planet.svg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    height: 63px;
-    width: 300px;
-    margin: 0 auto;
+}
+div.kc-logo-text::after {
+    content: 'Third Room';
+    font-size: var(--fs-h2);
+    letter-spacing: var(--ls-h2);
+    line-height: var(--lh-h2);
+    font-weight: var(--fw-bold);
+    color: var(--tc-surface);
 }
 
 div.kc-logo-text span {
@@ -102,18 +196,8 @@ div.kc-logo-text span {
 }
 
 #kc-header {
-    color: #ededed;
-    overflow: visible;
-    white-space: nowrap;
-}
-
-#kc-header-wrapper {
-    font-size: 29px;
-    text-transform: uppercase;
-    letter-spacing: 3px;
-    line-height: 1.2em;
-    padding: 62px 10px 20px;
-    white-space: normal;
+    margin-bottom: var(--sp-xl);
+    text-align: left;
 }
 
 #kc-content {
@@ -173,14 +257,12 @@ div.kc-logo-text span {
     margin-top: 10px;
 }
 
-#kc-info {
-    margin: 20px -40px -30px;
-}
-
 #kc-info-wrapper {
-    font-size: 13px;
-    padding: 15px 35px;
-    background-color: #F0F0F0;
+    padding: 0 var(--sp-md);
+    color: var(--tc-surface-low);
+    font-size: var(--fs-b3);
+    letter-spacing: var(--ls-b3);
+    line-height: var(--lh-b3);
 }
 
 #kc-form-options span {
@@ -189,9 +271,10 @@ div.kc-logo-text span {
 
 #kc-form-options .checkbox {
     margin-top: 0;
-    color: #72767b;
 }
-
+#kc-form-options .checkbox label input {
+    transform: translateY(-1px);
+}
 #kc-terms-text {
     margin-bottom: 20px;
 }
@@ -376,33 +459,6 @@ ul#kc-totp-supported-apps {
 }
 
 @media (max-width: 767px) {
-
-    .login-pf body {
-        background: white;
-    }
-
-    #kc-header {
-        padding-left: 15px;
-        padding-right: 15px;
-        float: none;
-        text-align: left;
-    }
-
-    #kc-header-wrapper {
-        font-size: 16px;
-        font-weight: bold;
-        padding: 20px 60px 0 0;
-        color: #72767b;
-        letter-spacing: 0;
-    }
-
-    div.kc-logo-text {
-        margin: 0;
-        width: 150px;
-        height: 32px;
-        background-size: 100%;
-    }
-
     #kc-form {
         float: none;
     }
@@ -447,6 +503,8 @@ ul#kc-totp-supported-apps {
 
 #kc-form-buttons {
     margin-top: 20px;
+    display: flex;
+    gap: var(--sp-sm);
 }
 
 .login-pf-page .login-pf-brand {
@@ -501,26 +559,15 @@ ul#kc-totp-supported-apps {
 }
 
 .card-pf {
-    margin: 0 auto;
-    box-shadow: var(--pf-global--BoxShadow--lg);
-    padding: 0 20px;
-    max-width: 500px;
-    border-top: 4px solid;
-    border-color: var(--pf-global--primary-color--100);
-    border-radius: 12px;
+    padding: 0 !important;
+    margin: 0 !important;
+    border: none;
+    background-color: transparent;
+    box-shadow: none;
 }
 
 /*phone*/
 @media (max-width: 767px) {
-    .login-pf-page .card-pf {
-        max-width: none;
-        margin-left: 0;
-        margin-right: 0;
-        padding-top: 0;
-        border-top: 0;
-        box-shadow: 0 0;
-    }
-
     .kc-social-grid {
         grid-column-end: 12;
         --pf-l-grid__item--GridColumnEnd: span 12;
