@@ -48,7 +48,11 @@ body .login-pf-page {
     line-height: var(--lh-s1);
     letter-spacing: var(--ls-s1);
     font-weight: var(--fw-semi-bold) !important;
+    color: var(--tc-surface);
     text-align: left;
+}
+.login-pf-header #kc-page-title p {
+    color: var(--tc-surface);
 }
 
 .form-group {
@@ -83,6 +87,9 @@ body .login-pf-page {
     box-shadow: var(--bs-primary-border);
     background-image: unset;
     color: var(--tc-primary);
+}
+.pf-c-button.btn-default:not(:first-child) {
+    margin: 0 var(--sp-xs);
 }
 
 #kc-page-title {
@@ -319,23 +326,29 @@ ul#kc-totp-supported-apps {
 /* OAuth */
 
 #kc-oauth h3 {
-    margin-top: 0;
+    font-size: var(--fs-b2);
+    letter-spacing: var(--ls-b2);
+    line-height: var(--lh-b2);
+    font-weight: var(--fw-regular);
+}
+#kc-oauth h3:nth-last-of-type(1) {
+    font-size: var(--fs-b3);
+    letter-spacing: var(--ls-b3);
+    line-height: var(--lh-b3);
+    color: var(--tc-surface-low);
 }
 
 #kc-oauth ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+    margin: var(--sp-xs) 0 var(--sp-md);
+    padding-left: var(--sp-md);
+    list-style: disc;
 }
 
 #kc-oauth ul li {
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-    font-size: 12px;
-    padding: 10px 0;
-}
-
-#kc-oauth ul li:first-of-type {
-    border-top: 0;
+    font-size: var(--fs-b2);
+    letter-spacing: var(--ls-b2);
+    line-height: var(--lh-b2);
+    padding-bottom: var(--sp-xxs);
 }
 
 #kc-oauth .kc-role {
