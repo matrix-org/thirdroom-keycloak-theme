@@ -190,7 +190,7 @@ div.kc-logo-text::before {
     background-size: cover;
 }
 div.kc-logo-text::after {
-    content: 'Third Room';
+    content: 'thirdroom.io homeserver';
     font-size: var(--fs-h2);
     letter-spacing: var(--ls-h2);
     line-height: var(--lh-h2);
