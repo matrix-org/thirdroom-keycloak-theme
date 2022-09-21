@@ -55,6 +55,13 @@ body .login-pf-page {
     color: var(--tc-surface);
 }
 
+header.login-pf-header [class^=col] {
+    margin: 0;
+}
+header.login-pf-header [class^=col].subtitle {
+    margin-bottom: -24px;
+}
+
 .form-group {
     margin-bottom: var(--sp-md);
 }
