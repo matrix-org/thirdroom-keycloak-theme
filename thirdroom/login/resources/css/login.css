@@ -681,3 +681,8 @@ ul#kc-totp-supported-apps {
     margin-bottom: 16px;
 }
 /* End Recovery codes */
+
+#kc-select-try-another-way-form {
+    margin-top: 16px;
+    text-align: center;
+}
